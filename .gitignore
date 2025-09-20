@@ -38,3 +38,11 @@ dist-ssr
 .env.production.local
 .env.development.local
 .env.test.local
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+
+# C extensions
+*.so
