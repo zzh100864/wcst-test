@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威斯康星卡片分类测试 (WCST)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="login-container">
+            <h1>威斯康星卡片分类测试</h1>
+            <p>请输入您的姓名开始测试。</p>
+            <input type="text" id="name-input" placeholder="姓名">
+            <button id="start-button">开始测试</button>
+        </div>
+
+        <div id="practice-container" class="hidden">
+            <div class="info-header">
+                <span id="mode-display">练习模式</span>
+                <span id="user-name-display"></span>
+            </div>
+            <div id="stimulus-card-area">
+                <p>请将这张卡片与下面四张中的一张进行匹配</p>
+                <div class="card-placeholder">
+                    <div id="practice-stimulus-card" class="card"></div>
+                </div>
+            </div>
+            <div id="feedback-area">
+                <span id="practice-feedback-text"></span>
+            </div>
+            <div id="template-cards-area">
+                 <div class="card-container" id="practice-template-1">
+                    <div class="card"></div>
+                </div>
+                <div class="card-container" id="practice-template-2">
+                    <div class="card"></div>
+                </div>
+                <div class="card-container" id="practice-template-3">
+                    <div class="card"></div>
+                </div>
+                <div class="card-container" id="practice-template-4">
+                    <div class="card"></div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button id="start-real-test-button">开始正式测试</button>
+            </div>
+        </div>
+
+        <div id="test-container" class="hidden">
+            <div class="info-header">
+                <span id="trial-counter">试次: 1/128</span>
+                <span id="user-name-display"></span>
+            </div>
+            <div id="stimulus-card-area">
+                <p>请将这张卡片与下面四张中的一张进行匹配</p>
+                <div class="card-placeholder">
+                    <div id="stimulus-card" class="card"></div>
+                </div>
+            </div>
+            <div id="feedback-area">
+                <span id="feedback-text"></span>
+            </div>
+            <div id="template-cards-area">
+                 <div class="card-container" id="template-1">
+                    <div class="card"></div>
+                </div>
+                <div class="card-container" id="template-2">
+                    <div class="card"></div>
+                </div>
+                <div class="card-container" id="template-3">
+                    <div class="card"></div>
+                </div>
+                <div class="card-container" id="template-4">
+                    <div class="card"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="results-container" class="hidden">
+            <h2>测试结果</h2>
+            <div id="summary-results"></div>
+            <button id="export-button">导出为 Excel</button>
+            <div id="detailed-results-table"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

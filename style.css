@@ -1,0 +1,223 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+#app {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Login Container */
+#login-container {
+    text-align: center;
+}
+
+#login-container h1 {
+    font-size: 28px;
+    color: #1c1e21;
+    margin-bottom: 15px;
+}
+
+#login-container p {
+    font-size: 16px;
+    color: #606770;
+    margin-bottom: 30px;
+}
+
+#name-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#start-button {
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#start-button:hover {
+    background-color: #166fe5;
+}
+
+/* Test Container */
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #606770;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+}
+
+#stimulus-card-area, #feedback-area {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#stimulus-card-area p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card-placeholder {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-symbol {
+    font-size: 36px;
+    line-height: 1;
+}
+
+#template-cards-area {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+.card-container {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.card-container:hover {
+    background-color: #f0f8ff;
+    transform: translateY(-5px);
+}
+
+#feedback-area {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#feedback-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#feedback-text.correct {
+    color: #42b72a;
+}
+
+#feedback-text.incorrect {
+    color: #fa383e;
+}
+
+/* Results Container */
+#results-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#summary-results {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+#summary-results div {
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+#summary-results span {
+    font-weight: bold;
+    color: #1877f2;
+    font-size: 18px;
+}
+
+#export-button {
+    display: block;
+    margin: 20px auto;
+    background-color: #42b72a;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#export-button:hover {
+    background-color: #3aa825;
+}
+
+#detailed-results-table {
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+}
